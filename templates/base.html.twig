@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="DESCRIPTION">
+        <meta name="keywords" content="KEYWORDS">
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="FAVICON_URL">
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="TITLE"/>
+        <meta property="og:url" content="URL"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="IMAGE"/>
+        <meta property="og:description" content="DESCRIPTION"/>
+
+        {% block stylesheets %}<!-- CSS -->{% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}<!-- JS -->{% endblock %}
+    </body>
+</html>
