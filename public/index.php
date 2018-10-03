@@ -2,8 +2,7 @@
 
 use Symfony\Component\HttpFoundation\Request;
 
-require __DIR__.'/../src/Kernel.php';
-
+require __DIR__ . '/../src/Kernel.php';
 
 $environment = $_SERVER['APP_ENV'] ?? 'dev';
 $debug = (bool) ($_SERVER['APP_DEBUG'] ?? ('prod' !== $env));
