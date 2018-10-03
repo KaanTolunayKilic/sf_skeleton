@@ -1,3 +1,15 @@
+
+# Created by https://www.gitignore.io/api/symfony,composer
+
+### Composer ###
+composer.phar
+/vendor/
+
+# Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
+# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
+# composer.lock
+
+### Symfony ###
 # Cache and logs (Symfony2)
 /app/cache/*
 /app/logs/*
@@ -15,6 +27,10 @@
 !var/logs/.gitkeep
 !var/sessions/.gitkeep
 
+# Logs (Symfony4)
+/var/log/*
+!var/log/.gitkeep
+
 # Parameters
 /app/config/parameters.yml
 /app/config/parameters.ini
@@ -25,7 +41,6 @@
 /bin/*
 !bin/console
 !bin/symfony_requirements
-/vendor/
 
 # Assets and user uploads
 /web/bundles/
@@ -46,3 +61,10 @@
 
 # Embedded web-server pid file
 /.web-server-pid
+
+### Symfony Patch ###
+/web/css/
+/web/js/
+
+
+# End of https://www.gitignore.io/api/symfony,composer

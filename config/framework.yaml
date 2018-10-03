@@ -1,0 +1,8 @@
+framework:
+    secret: S0ME_SECRET
+    templating:
+        engines: ['twig']
+    profiler: { only_exceptions: false }
+
+twig:
+    paths: ['%kernel.project_dir%/templates']
