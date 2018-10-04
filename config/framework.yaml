@@ -6,3 +6,8 @@ framework:
 
 twig:
     paths: ['%kernel.project_dir%/templates']
+    globals:
+        app_title: 'App Title'
+        app_description: 'App Description'
+        app_url: 'http://www.example.de'
+        app_keywords: 'One,Two,Three'

@@ -2,20 +2,20 @@
 <html lang="de">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}{% endblock %}</title>
-        <meta name="description" content="DESCRIPTION">
-        <meta name="keywords" content="KEYWORDS">
+        <title>{% block title %}{{ app_title }}{% endblock %}</title>
+        <meta name="description" content="{{ app_description }}">
+        <meta name="keywords" content="{{ app_keywords }}">
         <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
 
-        <!-- Favicon -->
-        <link rel="icon" type="image/x-icon" href="FAVICON_URL">
+        <!-- Favicons -->
+        <link rel="icon" type="image/x-icon" href="/images/favicons/favicon.ico">
 
         <!-- Open Graph -->
-        <meta property="og:title" content="TITLE"/>
-        <meta property="og:url" content="URL"/>
+        <meta property="og:title" content="{{ app_title }}"/>
+        <meta property="og:url" content="{{ app_url }}"/>
         <meta property="og:type" content="website"/>
-        <meta property="og:image" content="IMAGE"/>
-        <meta property="og:description" content="DESCRIPTION"/>
+        <meta property="og:image" content="{{ app_url }}/images/logos/logo.png"/>
+        <meta property="og:description" content="{{ app_description }}"/>
 
         {% block stylesheets %}<!-- CSS -->{% endblock %}
     </head>
