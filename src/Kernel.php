@@ -13,6 +13,8 @@ class Kernel extends BaseKernel
 {
     use MicroKernelTrait;
 
+    const EXTENSIONS = '.{php,xml,yaml,yml}';
+
     public function registerBundles()
     {
         $bundles = [
@@ -31,9 +33,10 @@ class Kernel extends BaseKernel
 
     protected function configureContainer(ContainerBuilder $c, LoaderInterface $loader)
     {
-        $loader->load(__DIR__.'/../config/parameters.yaml');
-        $loader->load(__DIR__.'/../config/framework.yaml');
-        $loader->load(__DIR__.'/../config/services.yaml');
+        $loader->load(__DIR__.'/../config/parameters' . self::EXTENSIONS, 'glob');
+        $loader->load(__DIR__.'/../config/packages/config' . self::EXTENSIONS, 'glob');
+        $loader->load(__DIR__.'/../config/packages/config_' . $this->getEnvironment() . self::EXTENSIONS, 'glob');
+        $loader->load(__DIR__.'/../config/services/services' . self::EXTENSIONS, 'glob');
 
         // configure WebProfilerBundle only if the bundle is enabled
         if (isset($this->bundles['WebProfilerBundle'])) {

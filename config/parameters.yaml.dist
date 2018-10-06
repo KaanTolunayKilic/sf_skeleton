@@ -1,8 +1,11 @@
 parameters:
+    default_locale: 'de'
+
     mailer_transport: '<MAILER_TRANSPORT>'
     mailer_host: '<MAILER_HOST>'
     mailer_port: '<MAILER_PORT>'
     mailer_user: '<MAILER_USER>'
     mailer_password: '<MAILER_PASSWORD>'
     mailer_encryption: '<MAILER_ENCRYPTION>'
-    lead_receiver_email: '<LEAD_RECEIVER_MAIL>'
+    mailer_prod_delivery_address: '<MAILER_PROD_DELIVERY_ADDRESS>'
+    mailer_dev_delivery_address: '<MAILER_DEV_DELIVERY_ADDRESS>'

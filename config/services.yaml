@@ -1,9 +1,0 @@
-services:
-    _defaults:
-        autowire: true
-        public: false
-
-    App\Mailer\LeadMailSender:
-        public: true
-        arguments:
-            $receiver: '%lead_receiver_email%'
