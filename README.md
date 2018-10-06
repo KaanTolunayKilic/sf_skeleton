@@ -6,7 +6,7 @@ Basic project set up to speed up webpage creation.
 Step 1: you need to clone this repository and remove all history first.
 
 ```
-git clone git@github.com:KaanTolunayKilic/sf_skeleton.git
+git clone git@github.com:KaanTolunayKilic/sf_skeleton.git <PROJECT_NAME>
 rm -rf .git
 ```
 
@@ -21,6 +21,6 @@ git commit -m "Initial commit"
 Step 3: push to GitHub
 
 ```
-git remote add origin <github-uri>
+git remote add origin <GITHUB_URI>
 git push -u --force origin master
 ```
