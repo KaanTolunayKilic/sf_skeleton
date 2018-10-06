@@ -1,7 +1,7 @@
 # sf_skeleton
 Basic project set up to speed up webpage creation.
 
-# Create new project
+## Create new project
 
 Step 1: you need to clone this repository and remove all history first.
 
