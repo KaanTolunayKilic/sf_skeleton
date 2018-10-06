@@ -1,8 +1,11 @@
 framework:
-    secret: S0ME_SECRET
+    secret: '\kSZ6Jkd>t)Tb<KKf~<5FF*ML(VAFhFq'
     templating:
         engines: ['twig']
     profiler: { only_exceptions: false }
+    default_locale: 'en'
+        translator:
+            fallbacks: ['en']
 
 twig:
     paths: ['%kernel.project_dir%/templates']
@@ -11,3 +14,11 @@ twig:
         app_description: 'App Description'
         app_url: 'http://www.example.de'
         app_keywords: 'One,Two,Three'
+
+swiftmailer:
+    transport: "%mailer_transport%"
+    host:      "%mailer_host%"
+    port:      "%mailer_port%"
+    username:  "%mailer_user%"
+    password:  "%mailer_password%"
+    encryption: "%mailer_encryption%"

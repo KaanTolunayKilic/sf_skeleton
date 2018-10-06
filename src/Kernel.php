@@ -15,10 +15,11 @@ class Kernel extends BaseKernel
 
     public function registerBundles()
     {
-        $bundles = array(
+        $bundles = [
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
-        );
+            new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
+        ];
 
         if ($this->getEnvironment() == 'dev') {
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
@@ -30,15 +31,16 @@ class Kernel extends BaseKernel
 
     protected function configureContainer(ContainerBuilder $c, LoaderInterface $loader)
     {
+        $loader->load(__DIR__.'/../config/parameters.yaml');
         $loader->load(__DIR__.'/../config/framework.yaml');
         $loader->load(__DIR__.'/../config/services.yaml');
 
         // configure WebProfilerBundle only if the bundle is enabled
         if (isset($this->bundles['WebProfilerBundle'])) {
-            $c->loadFromExtension('web_profiler', array(
+            $c->loadFromExtension('web_profiler', [
                 'toolbar' => true,
                 'intercept_redirects' => false,
-            ));
+            ]);
         }
     }
 

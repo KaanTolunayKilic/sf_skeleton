@@ -1,0 +1,8 @@
+parameters:
+    mailer_transport: '<MAILER_TRANSPORT>'
+    mailer_host: '<MAILER_HOST>'
+    mailer_port: '<MAILER_PORT>'
+    mailer_user: '<MAILER_USER>'
+    mailer_password: '<MAILER_PASSWORD>'
+    mailer_encryption: '<MAILER_ENCRYPTION>'
+    lead_receiver_email: '<LEAD_RECEIVER_MAIL>'
