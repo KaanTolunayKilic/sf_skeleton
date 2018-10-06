@@ -21,15 +21,29 @@
         "symfony/templating": "^4.1",
         "symfony/swiftmailer-bundle": "^3.2",
         "symfony/validator": "^4.1",
-        "symfony/translation": "^4.1"
+        "symfony/translation": "^4.1",
+        "incenteev/composer-parameter-handler": "~2.0"
+    },
+    "require-dev": {
+        "symfony/web-server-bundle": "^4.1",
+        "symfony/web-profiler-bundle": "^4.1"
     },
     "autoload": {
         "psr-4": {
             "App\\": "src/"
         }
     },
-    "require-dev": {
-        "symfony/web-server-bundle": "^4.1",
-        "symfony/web-profiler-bundle": "^4.1"
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ]
+    },
+    "extra": {
+        "incenteev-parameters": {
+            "file": "config/parameters.yaml"
+        }
     }
 }
