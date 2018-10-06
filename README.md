@@ -7,6 +7,7 @@ Step 1: you need to clone this repository and remove all history first.
 
 ```
 git clone git@github.com:KaanTolunayKilic/sf_skeleton.git <PROJECT_NAME>
+cd <PROJECT_NAME>
 rm -rf .git
 ```
 
