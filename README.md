@@ -25,3 +25,5 @@ Step 3: push to GitHub
 git remote add origin <GITHUB_URI>
 git push -u --force origin master
 ```
+
+You need to install all dependencies as well. Just run `composer install` in your project directory.
