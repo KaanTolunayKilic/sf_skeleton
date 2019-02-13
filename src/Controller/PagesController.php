@@ -26,7 +26,7 @@ class PagesController extends AbstractController
     }
 
     /**
-     * @Route("/about", name="page_about")
+     * @Route({"en" : "/about-us", "de" : "/ueber-uns"}, name="page_about")
      */
     public function about()
     {
@@ -34,7 +34,7 @@ class PagesController extends AbstractController
     }
 
     /**
-     * @Route("/contact", name="page_contact")
+     * @Route({"en" : "/contact", "de" : "/kontakt"}, name="page_contact")
      */
     public function contact()
     {
@@ -42,7 +42,7 @@ class PagesController extends AbstractController
     }
 
     /**
-     * @Route("/imprint", name="page_imprint")
+     * @Route({"en" : "/imprint", "de" : "/impressum"}, name="page_imprint")
      */
     public function imprint()
     {
@@ -50,7 +50,7 @@ class PagesController extends AbstractController
     }
 
     /**
-     * @Route("/privacy", name="page_privacy")
+     * @Route({"en" : "/privacy", "de" : "/datenschutz"}, name="page_privacy")
      */
     public function privacy()
     {
